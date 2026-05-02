@@ -86,4 +86,7 @@ public class SpaceInvaders extends JPanel implements Runnable {
 
         panelJuego.iniciarHiloJuego();
     }
+
+    public void neilkbro(){
+    }
 }
