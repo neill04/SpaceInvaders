@@ -60,7 +60,7 @@ public class SpaceInvaders extends JPanel implements Runnable {
         // Aquí pondremos la lógica pronto: mover nave, mover aliens, etc.
     }
 
-    public void paintComponent(Graphics g) {
+    /**public void paintComponent(Graphics g) {
         super.paintComponent(g); // Limpia la pantalla
         Graphics2D g2 = (Graphics2D) g;
 
@@ -69,7 +69,7 @@ public class SpaceInvaders extends JPanel implements Runnable {
         g2.fillRect(375, 500, 50, 50);
 
         g2.dispose(); // Liberar memoria gráfica
-    }
+    }**/
 
     public static void main(String[] args) {
         JFrame ventana = new JFrame();
@@ -85,8 +85,5 @@ public class SpaceInvaders extends JPanel implements Runnable {
         ventana.setVisible(true);
 
         panelJuego.iniciarHiloJuego();
-    }
-
-    public void neilkbro(){
     }
 }
