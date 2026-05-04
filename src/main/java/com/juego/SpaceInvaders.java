@@ -1,16 +1,18 @@
+package com.juego;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
+import java.awt.*;
+import java.awt.image.BufferedImage;
 
 public class SpaceInvaders extends JPanel implements Runnable {
 
     // Configuración de la pantalla
-    final int ANCHO_PANTALLA = 800;
-    final int ALTO_PANTALLA = 600;
+    final int ANCHO_PANTALLA = 1366;
+    final int ALTO_PANTALLA = 728;
     int FPS = 60;
+
+    BufferedImage spriteJugador = nave.cargarImagen("/sprites/nave.png");
 
     Thread hiloJuego;
 
@@ -60,16 +62,16 @@ public class SpaceInvaders extends JPanel implements Runnable {
         // Aquí pondremos la lógica pronto: mover nave, mover aliens, etc.
     }
 
-    /**public void paintComponent(Graphics g) {
+    public void paintComponent(Graphics g) {
         super.paintComponent(g); // Limpia la pantalla
         Graphics2D g2 = (Graphics2D) g;
 
-        // Dibujo temporal para comprobar que funciona (nuestra "nave" provisional)
-        g2.setColor(Color.GREEN);
-        g2.fillRect(375, 500, 50, 50);
+        if (spriteJugador != null){
 
-        g2.dispose(); // Liberar memoria gráfica
-    }**/
+            g2.drawImage(spriteJugador,650,600,null);
+
+        }
+    }
 
     public static void main(String[] args) {
         JFrame ventana = new JFrame();
